@@ -5,15 +5,15 @@
 ## 最新版本
 
 <!-- workbuddy-latest:start -->
-**当前最新版本：`4.22.7.27539150`**
+**当前最新版本：`4.22.10.27634624`**
 
 最新平台：macOS Apple Silicon, macOS Intel, Windows x64
 
 | 平台 | 最新版本 | 下载 | SHA256 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| macOS Apple Silicon | `4.22.7.27539150` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.7.27539150-6dc48069.zip) | `da3b155c24bf` | `2026-05-09T09:15:55Z` |
-| macOS Intel | `4.22.7.27539150` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.7.27539150-6dc48069.zip) | `e7949d1b4577` | `2026-05-09T09:21:15Z` |
-| Windows x64 | `4.22.7.27539150` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.7.27539150-6dc48069.exe) | - | `2026-05-09T09:21:15Z` |
+| macOS Apple Silicon | `4.22.10.27634624` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.10.27634624-ec5e02bd.zip) | `cdbfe4202381` | `2026-05-10T10:21:26Z` |
+| macOS Intel | `4.22.10.27634624` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.10.27634624-ec5e02bd.zip) | `5ee3f94af814` | `2026-05-10T10:21:26Z` |
+| Windows x64 | `4.22.10.27634624` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.10.27634624-ec5e02bd.exe) | - | `2026-05-10T10:21:26Z` |
 <!-- workbuddy-latest:end -->
 
 默认接口模板：
