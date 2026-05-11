@@ -27,6 +27,8 @@ DEFAULT_README_PATH = "README.md"
 REQUIRED_FIELDS = ("version", "url", "productVersion", "sha256hash", "timestamp")
 README_START_MARKER = "<!-- workbuddy-latest:start -->"
 README_END_MARKER = "<!-- workbuddy-latest:end -->"
+README_HISTORY_START_MARKER = "<!-- workbuddy-history:start -->"
+README_HISTORY_END_MARKER = "<!-- workbuddy-history:end -->"
 PLATFORM_LABELS = {
     "workbuddy-darwin-arm64": "macOS Apple Silicon",
     "workbuddy-darwin-x64": "macOS Intel",
@@ -208,6 +210,16 @@ def platform_label(platform: str) -> str:
     return PLATFORM_LABELS.get(platform, platform)
 
 
+def release_version(release: dict[str, Any]) -> str:
+    return str(release.get("version") or release.get("productVersion") or "").strip()
+
+
+def markdown_link(label: str, url: str) -> str:
+    if not url:
+        return "-"
+    return f"[{label}]({url})"
+
+
 def render_latest_section(records: list[Any]) -> str:
     latest = latest_records_by_platform(records)
     valid_records = [record for record in latest.values() if isinstance(record.get("release"), dict)]
@@ -238,9 +250,9 @@ def render_latest_section(records: list[Any]) -> str:
             release = record.get("release")
             if not isinstance(release, dict):
                 continue
-            version = str(release.get("version") or release.get("productVersion") or "").strip()
+            version = release_version(release)
             url = str(release.get("url") or "").strip()
-            link = f"[下载]({url})" if url else "-"
+            link = markdown_link("下载", url)
             marker = " **最新**" if record_timestamp(record) == newest_timestamp else ""
             rows.append(
                 "| {platform} | `{version}`{marker} | {link} | {sha256} | `{first_seen}` |".format(
@@ -266,21 +278,95 @@ def render_latest_section(records: list[Any]) -> str:
     return f"{README_START_MARKER}\n{body}\n{README_END_MARKER}"
 
 
+def render_history_section(records: list[Any]) -> str:
+    valid_records = [
+        record
+        for record in records
+        if isinstance(record, dict) and isinstance(record.get("release"), dict)
+    ]
+    if not valid_records:
+        body = "_暂无历史版本记录。_"
+    else:
+        rows = [
+            "| 版本 | 平台 | 下载 | SHA256 | 接口时间戳 | 首次记录 |",
+            "| --- | --- | --- | --- | --- | --- |",
+        ]
+        for record in sorted(
+            valid_records,
+            key=lambda item: (
+                record_timestamp(item),
+                str(item.get("firstSeenAt") or ""),
+                str(item.get("platform") or ""),
+            ),
+            reverse=True,
+        ):
+            release = record["release"]
+            platform = str(record.get("platform") or "")
+            version = release_version(release)
+            url = str(release.get("url") or "").strip()
+            rows.append(
+                "| {version} | {platform} | {link} | {sha256} | `{timestamp}` | `{first_seen}` |".format(
+                    version=f"`{version}`" if version else "-",
+                    platform=platform_label(platform),
+                    link=markdown_link("下载", url),
+                    sha256=short_hash(release.get("sha256hash")),
+                    timestamp=release.get("timestamp") or "-",
+                    first_seen=record.get("firstSeenAt") or "-",
+                )
+            )
+        body = "\n".join(rows)
+
+    return f"{README_HISTORY_START_MARKER}\n{body}\n{README_HISTORY_END_MARKER}"
+
+
+def replace_marked_section(
+    content: str,
+    start_marker: str,
+    end_marker: str,
+    heading: str,
+    section: str,
+    insert_after: str,
+) -> str:
+    if start_marker in content and end_marker in content:
+        start = content.index(start_marker)
+        end = content.index(end_marker, start) + len(end_marker)
+        return f"{content[:start]}{section}{content[end:]}"
+
+    insert_at = content.find(insert_after)
+    if insert_at != -1:
+        insert_at += len(insert_after)
+        return f"{content[:insert_at]}\n\n## {heading}\n\n{section}{content[insert_at:]}"
+
+    return f"{content.rstrip()}\n\n## {heading}\n\n{section}\n"
+
+
 def update_readme(readme_path: Path, records: list[Any]) -> bool:
     if not readme_path.exists():
         return False
 
     content = readme_path.read_text(encoding="utf-8")
-    section = render_latest_section(records)
-    if README_START_MARKER in content and README_END_MARKER in content:
-        start = content.index(README_START_MARKER)
-        end = content.index(README_END_MARKER, start) + len(README_END_MARKER)
-        next_content = f"{content[:start]}{section}{content[end:]}"
-    else:
-        first_block_end = content.find("\n\n")
-        intro_end = content.find("\n\n", first_block_end + 2) if first_block_end != -1 else -1
-        insert_at = intro_end + 2 if intro_end != -1 else len(content)
-        next_content = f"{content[:insert_at]}\n## 最新版本\n\n{section}\n\n{content[insert_at:]}"
+    latest_section = render_latest_section(records)
+    history_section = render_history_section(records)
+
+    first_block_end = content.find("\n\n")
+    intro_end = content.find("\n\n", first_block_end + 2) if first_block_end != -1 else -1
+    latest_insert_after = content[: intro_end + 2] if intro_end != -1 else content
+    next_content = replace_marked_section(
+        content,
+        README_START_MARKER,
+        README_END_MARKER,
+        "最新版本",
+        latest_section,
+        latest_insert_after,
+    )
+    next_content = replace_marked_section(
+        next_content,
+        README_HISTORY_START_MARKER,
+        README_HISTORY_END_MARKER,
+        "历史版本",
+        history_section,
+        README_END_MARKER,
+    )
 
     return write_text_if_changed(readme_path, next_content)
 
@@ -351,13 +437,14 @@ def main() -> int:
     if not changed and not readme_changed:
         return 0
 
-    latest = {
-        "recordedAt": now,
-        "platforms": latest_releases,
-    }
+    if changed:
+        latest = {
+            "recordedAt": now,
+            "platforms": latest_releases,
+        }
+        write_json(record_path, records)
+        write_json(latest_path, latest)
 
-    write_json(record_path, records)
-    write_json(latest_path, latest)
     print(f"Updated release files; new releases: {new_count}; readme changed: {readme_changed}")
     return 0
 

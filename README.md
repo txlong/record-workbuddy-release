@@ -16,6 +16,19 @@
 | Windows x64 | `4.22.10.27634624` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.10.27634624-ec5e02bd.exe) | - | `2026-05-10T10:21:26Z` |
 <!-- workbuddy-latest:end -->
 
+## 历史版本
+
+<!-- workbuddy-history:start -->
+| 版本 | 平台 | 下载 | SHA256 | 接口时间戳 | 首次记录 |
+| --- | --- | --- | --- | --- | --- |
+| `4.22.10.27634624` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.10.27634624-ec5e02bd.exe) | - | `1778357824` | `2026-05-10T10:21:26Z` |
+| `4.22.10.27634624` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.10.27634624-ec5e02bd.zip) | `5ee3f94af814` | `1778357824` | `2026-05-10T10:21:26Z` |
+| `4.22.10.27634624` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.10.27634624-ec5e02bd.zip) | `cdbfe4202381` | `1778357824` | `2026-05-10T10:21:26Z` |
+| `4.22.7.27539150` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.7.27539150-6dc48069.exe) | - | `1778262350` | `2026-05-09T09:21:15Z` |
+| `4.22.7.27539150` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.7.27539150-6dc48069.zip) | `e7949d1b4577` | `1778262350` | `2026-05-09T09:21:15Z` |
+| `4.22.7.27539150` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.7.27539150-6dc48069.zip) | `da3b155c24bf` | `1778262350` | `2026-05-09T09:15:55Z` |
+<!-- workbuddy-history:end -->
+
 默认接口模板：
 
 ```text
@@ -32,6 +45,7 @@ workbuddy-win32-x64-user
 
 ## 记录文件
 
+- `README.md`：顶部自动展示“最新版本”和“历史版本”列表，方便直接在 GitHub 项目首页查看。
 - `data/releases.json`：历史版本记录。脚本会按 `platform + sha256hash` 去重；如果没有 `sha256hash`，则使用 `platform + version + productVersion + url` 去重。
 - `data/latest.json`：最近一次发生写入时，各平台的接口返回内容和记录时间。
 
