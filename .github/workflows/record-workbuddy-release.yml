@@ -32,4 +32,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: record workbuddy release"
-          file_pattern: README.md data/releases.json data/latest.json
+          file_pattern: README.md data/releases.json data/latest.json data/changelog.json

@@ -4,8 +4,10 @@
 from __future__ import annotations
 
 import argparse
+from html.parser import HTMLParser
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -24,6 +26,8 @@ DEFAULT_PLATFORMS = (
 DEFAULT_RECORD_PATH = "data/releases.json"
 DEFAULT_LATEST_PATH = "data/latest.json"
 DEFAULT_README_PATH = "README.md"
+DEFAULT_CHANGELOG_PATH = "data/changelog.json"
+DEFAULT_CHANGELOG_URL = "https://www.codebuddy.cn/docs/workbuddy/Changelog"
 REQUIRED_FIELDS = ("version", "url", "productVersion", "sha256hash", "timestamp")
 README_START_MARKER = "<!-- workbuddy-latest:start -->"
 README_END_MARKER = "<!-- workbuddy-latest:end -->"
@@ -110,6 +114,99 @@ def fetch_release(url: str, timeout: int) -> dict[str, Any]:
         raise RuntimeError(f"Response is missing required field(s): {', '.join(missing)}")
 
     return release
+
+
+def fetch_text(url: str, timeout: int) -> str:
+    request = Request(
+        url,
+        headers={
+            "Accept": "text/html, text/plain",
+            "User-Agent": "record-workbuddy-release/1.0",
+        },
+    )
+    try:
+        with urlopen(request, timeout=timeout) as response:
+            charset = response.headers.get_content_charset() or "utf-8"
+            return response.read().decode(charset, errors="replace")
+    except HTTPError as exc:
+        raise RuntimeError(f"HTTP {exc.code} while fetching {url}") from exc
+    except URLError as exc:
+        raise RuntimeError(f"Network error while fetching {url}: {exc.reason}") from exc
+
+
+class ChangelogParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.entries: dict[str, dict[str, Any]] = {}
+        self.current_version: str | None = None
+        self.capture: str | None = None
+        self.parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in {"h2", "h3"}:
+            self.capture = "heading"
+            self.parts = []
+        elif tag == "li" and self.current_version:
+            self.capture = "item"
+            self.parts = []
+
+    def handle_data(self, data: str) -> None:
+        if self.capture:
+            self.parts.append(data)
+
+    def handle_endtag(self, tag: str) -> None:
+        if self.capture == "heading" and tag in {"h2", "h3"}:
+            text = normalize_text("".join(self.parts))
+            match = re.search(r"(\d+\.\d+\.\d+)", text)
+            if match:
+                self.current_version = match.group(1)
+                self.entries.setdefault(
+                    self.current_version,
+                    {"title": text, "items": []},
+                )
+            self.capture = None
+            self.parts = []
+        elif self.capture == "item" and tag == "li":
+            text = normalize_text("".join(self.parts))
+            if text and self.current_version:
+                self.entries.setdefault(
+                    self.current_version,
+                    {"title": f"{self.current_version} 版本发布", "items": []},
+                )["items"].append(text)
+            self.capture = None
+            self.parts = []
+
+
+def normalize_text(value: str) -> str:
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def parse_changelog(html: str, source: str, fetched_at: str) -> dict[str, Any]:
+    parser = ChangelogParser()
+    parser.feed(html)
+    return {
+        "fetchedAt": fetched_at,
+        "source": source,
+        "versions": parser.entries,
+    }
+
+
+def load_changelog(path: Path) -> dict[str, Any]:
+    payload = read_json(path, {"versions": {}})
+    if not isinstance(payload, dict):
+        return {"versions": {}}
+    versions = payload.get("versions")
+    if not isinstance(versions, dict):
+        payload["versions"] = {}
+    return payload
+
+
+def fetch_changelog(url: str, path: Path, timeout: int, now: str) -> dict[str, Any]:
+    try:
+        return parse_changelog(fetch_text(url, timeout), url, now)
+    except RuntimeError as exc:
+        print(f"warning: unable to fetch changelog: {exc}", file=sys.stderr)
+        return load_changelog(path)
 
 
 def release_key(platform: str, release: dict[str, Any]) -> str:
@@ -214,13 +311,65 @@ def release_version(release: dict[str, Any]) -> str:
     return str(release.get("version") or release.get("productVersion") or "").strip()
 
 
+def changelog_key(version: str) -> str:
+    match = re.match(r"^(\d+\.\d+\.\d+)", version)
+    return match.group(1) if match else version
+
+
+def changelog_entry(changelog: dict[str, Any], version: str) -> dict[str, Any] | None:
+    versions = changelog.get("versions")
+    if not isinstance(versions, dict):
+        return None
+    entry = versions.get(changelog_key(version))
+    return entry if isinstance(entry, dict) else None
+
+
+def changelog_items(changelog: dict[str, Any], version: str, limit: int) -> list[str]:
+    entry = changelog_entry(changelog, version)
+    if not entry:
+        return []
+    items = entry.get("items")
+    if not isinstance(items, list):
+        return []
+    return [str(item) for item in items[:limit] if str(item).strip()]
+
+
+def changelog_source(changelog: dict[str, Any]) -> str:
+    return str(changelog.get("source") or DEFAULT_CHANGELOG_URL)
+
+
+def filter_changelog_for_records(changelog: dict[str, Any], records: list[Any]) -> dict[str, Any]:
+    versions = changelog.get("versions")
+    if not isinstance(versions, dict):
+        versions = {}
+
+    needed_versions = set()
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        release = record.get("release")
+        if isinstance(release, dict):
+            version = release_version(release)
+            if version:
+                needed_versions.add(changelog_key(version))
+
+    return {
+        "source": changelog_source(changelog),
+        "versions": {
+            version: versions[version]
+            for version in sorted(needed_versions, reverse=True)
+            if version in versions
+        },
+    }
+
+
 def markdown_link(label: str, url: str) -> str:
     if not url:
         return "-"
     return f"[{label}]({url})"
 
 
-def render_latest_section(records: list[Any]) -> str:
+def render_latest_section(records: list[Any], changelog: dict[str, Any]) -> str:
     latest = latest_records_by_platform(records)
     valid_records = [record for record in latest.values() if isinstance(record.get("release"), dict)]
     if not valid_records:
@@ -274,11 +423,23 @@ def render_latest_section(records: list[Any]) -> str:
                 *rows,
             ]
         )
+        latest_changes = changelog_items(changelog, newest_version, 6)
+        if latest_changes:
+            change_lines = [f"- {item}" for item in latest_changes]
+            body = "\n".join(
+                [
+                    body,
+                    "",
+                    f"更新日志：{markdown_link(changelog_key(newest_version), changelog_source(changelog))}",
+                    "",
+                    *change_lines,
+                ]
+            )
 
     return f"{README_START_MARKER}\n{body}\n{README_END_MARKER}"
 
 
-def render_history_section(records: list[Any]) -> str:
+def render_history_section(records: list[Any], changelog: dict[str, Any]) -> str:
     valid_records = [
         record
         for record in records
@@ -288,8 +449,8 @@ def render_history_section(records: list[Any]) -> str:
         body = "_暂无历史版本记录。_"
     else:
         rows = [
-            "| 版本 | 平台 | 下载 | SHA256 | 接口时间戳 | 首次记录 |",
-            "| --- | --- | --- | --- | --- | --- |",
+            "| 版本 | 平台 | 下载 | 更新日志 | SHA256 | 接口时间戳 | 首次记录 |",
+            "| --- | --- | --- | --- | --- | --- | --- |",
         ]
         for record in sorted(
             valid_records,
@@ -304,11 +465,14 @@ def render_history_section(records: list[Any]) -> str:
             platform = str(record.get("platform") or "")
             version = release_version(release)
             url = str(release.get("url") or "").strip()
+            changes = changelog_items(changelog, version, 1)
+            change_summary = changes[0] if changes else "-"
             rows.append(
-                "| {version} | {platform} | {link} | {sha256} | `{timestamp}` | `{first_seen}` |".format(
+                "| {version} | {platform} | {link} | {change_summary} | {sha256} | `{timestamp}` | `{first_seen}` |".format(
                     version=f"`{version}`" if version else "-",
                     platform=platform_label(platform),
                     link=markdown_link("下载", url),
+                    change_summary=change_summary,
                     sha256=short_hash(release.get("sha256hash")),
                     timestamp=release.get("timestamp") or "-",
                     first_seen=record.get("firstSeenAt") or "-",
@@ -340,13 +504,13 @@ def replace_marked_section(
     return f"{content.rstrip()}\n\n## {heading}\n\n{section}\n"
 
 
-def update_readme(readme_path: Path, records: list[Any]) -> bool:
+def update_readme(readme_path: Path, records: list[Any], changelog: dict[str, Any]) -> bool:
     if not readme_path.exists():
         return False
 
     content = readme_path.read_text(encoding="utf-8")
-    latest_section = render_latest_section(records)
-    history_section = render_history_section(records)
+    latest_section = render_latest_section(records, changelog)
+    history_section = render_history_section(records, changelog)
 
     first_block_end = content.find("\n\n")
     intro_end = content.find("\n\n", first_block_end + 2) if first_block_end != -1 else -1
@@ -383,6 +547,8 @@ def main() -> int:
     parser.add_argument("--record-path", default=os.getenv("WORKBUDDY_RECORD_PATH", DEFAULT_RECORD_PATH))
     parser.add_argument("--latest-path", default=os.getenv("WORKBUDDY_LATEST_PATH", DEFAULT_LATEST_PATH))
     parser.add_argument("--readme-path", default=os.getenv("WORKBUDDY_README_PATH", DEFAULT_README_PATH))
+    parser.add_argument("--changelog-path", default=os.getenv("WORKBUDDY_CHANGELOG_PATH", DEFAULT_CHANGELOG_PATH))
+    parser.add_argument("--changelog-url", default=os.getenv("WORKBUDDY_CHANGELOG_URL", DEFAULT_CHANGELOG_URL))
     parser.add_argument("--timeout", type=int, default=int(os.getenv("WORKBUDDY_TIMEOUT", "30")))
     args = parser.parse_args()
 
@@ -394,6 +560,7 @@ def main() -> int:
     record_path = Path(args.record_path)
     latest_path = Path(args.latest_path)
     readme_path = Path(args.readme_path)
+    changelog_path = Path(args.changelog_path)
     now = utc_now()
 
     records = read_json(record_path, [])
@@ -432,10 +599,18 @@ def main() -> int:
             changed = upsert_record_metadata(existing_record, platform, release, source) or changed
             print(f"Already recorded: {current_key}")
 
-    readme_changed = update_readme(readme_path, records)
+    changelog = filter_changelog_for_records(
+        fetch_changelog(args.changelog_url, changelog_path, args.timeout, now),
+        records,
+    )
+    changelog_changed = load_changelog(changelog_path) != changelog
+    readme_changed = update_readme(readme_path, records, changelog)
 
-    if not changed and not readme_changed:
+    if not changed and not readme_changed and not changelog_changed:
         return 0
+
+    if changelog_changed:
+        write_json(changelog_path, changelog)
 
     if changed:
         latest = {
@@ -445,7 +620,12 @@ def main() -> int:
         write_json(record_path, records)
         write_json(latest_path, latest)
 
-    print(f"Updated release files; new releases: {new_count}; readme changed: {readme_changed}")
+    print(
+        "Updated release files; "
+        f"new releases: {new_count}; "
+        f"readme changed: {readme_changed}; "
+        f"changelog changed: {changelog_changed}"
+    )
     return 0
 
 

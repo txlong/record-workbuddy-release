@@ -14,19 +14,28 @@
 | macOS Apple Silicon | `4.22.10.27634624` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.10.27634624-ec5e02bd.zip) | `cdbfe4202381` | `2026-05-10T10:21:26Z` |
 | macOS Intel | `4.22.10.27634624` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.10.27634624-ec5e02bd.zip) | `5ee3f94af814` | `2026-05-10T10:21:26Z` |
 | Windows x64 | `4.22.10.27634624` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.10.27634624-ec5e02bd.exe) | - | `2026-05-10T10:21:26Z` |
+
+更新日志：[4.22.10](https://www.codebuddy.cn/docs/workbuddy/Changelog)
+
+- 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类
+- 新增 Windows 网络代理配置支持，解决代理环境下无法使用的问题
+- 新增默认开启操作系统代理开关
+- 新增成长计划"去完成"按钮可跳转到客户端对应功能界面
+- 优化腾讯元宝搜索展示区域，简化为单行灰色文字
+- 修复部分专家身份确认异常的问题
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
 
 <!-- workbuddy-history:start -->
-| 版本 | 平台 | 下载 | SHA256 | 接口时间戳 | 首次记录 |
-| --- | --- | --- | --- | --- | --- |
-| `4.22.10.27634624` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.10.27634624-ec5e02bd.exe) | - | `1778357824` | `2026-05-10T10:21:26Z` |
-| `4.22.10.27634624` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.10.27634624-ec5e02bd.zip) | `5ee3f94af814` | `1778357824` | `2026-05-10T10:21:26Z` |
-| `4.22.10.27634624` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.10.27634624-ec5e02bd.zip) | `cdbfe4202381` | `1778357824` | `2026-05-10T10:21:26Z` |
-| `4.22.7.27539150` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.7.27539150-6dc48069.exe) | - | `1778262350` | `2026-05-09T09:21:15Z` |
-| `4.22.7.27539150` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.7.27539150-6dc48069.zip) | `e7949d1b4577` | `1778262350` | `2026-05-09T09:21:15Z` |
-| `4.22.7.27539150` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.7.27539150-6dc48069.zip) | `da3b155c24bf` | `1778262350` | `2026-05-09T09:15:55Z` |
+| 版本 | 平台 | 下载 | 更新日志 | SHA256 | 接口时间戳 | 首次记录 |
+| --- | --- | --- | --- | --- | --- | --- |
+| `4.22.10.27634624` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.10.27634624-ec5e02bd.exe) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | - | `1778357824` | `2026-05-10T10:21:26Z` |
+| `4.22.10.27634624` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.10.27634624-ec5e02bd.zip) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | `5ee3f94af814` | `1778357824` | `2026-05-10T10:21:26Z` |
+| `4.22.10.27634624` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.10.27634624-ec5e02bd.zip) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | `cdbfe4202381` | `1778357824` | `2026-05-10T10:21:26Z` |
+| `4.22.7.27539150` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.7.27539150-6dc48069.exe) | 新增系统代理自动检测并默认启用，解决代理环境下登录失败的问题 | - | `1778262350` | `2026-05-09T09:21:15Z` |
+| `4.22.7.27539150` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.7.27539150-6dc48069.zip) | 新增系统代理自动检测并默认启用，解决代理环境下登录失败的问题 | `e7949d1b4577` | `1778262350` | `2026-05-09T09:21:15Z` |
+| `4.22.7.27539150` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.7.27539150-6dc48069.zip) | 新增系统代理自动检测并默认启用，解决代理环境下登录失败的问题 | `da3b155c24bf` | `1778262350` | `2026-05-09T09:15:55Z` |
 <!-- workbuddy-history:end -->
 
 默认接口模板：
@@ -48,6 +57,7 @@ workbuddy-win32-x64-user
 - `README.md`：顶部自动展示“最新版本”和“历史版本”列表，方便直接在 GitHub 项目首页查看。
 - `data/releases.json`：历史版本记录。脚本会按 `platform + sha256hash` 去重；如果没有 `sha256hash`，则使用 `platform + version + productVersion + url` 去重。
 - `data/latest.json`：最近一次发生写入时，各平台的接口返回内容和记录时间。
+- `data/changelog.json`：从官方 WorkBuddy 更新日志解析出的版本说明缓存，只保留已记录版本对应的条目。
 
 每条历史记录包含：
 
@@ -86,7 +96,9 @@ python scripts/record_workbuddy_release.py \
 ```bash
 WORKBUDDY_PLATFORMS="workbuddy-darwin-arm64,workbuddy-darwin-x64,workbuddy-win32-x64-user" \
 WORKBUDDY_UPDATE_URL_TEMPLATE="https://www.codebuddy.cn/v2/update?platform={platform}" \
+WORKBUDDY_CHANGELOG_URL="https://www.codebuddy.cn/docs/workbuddy/Changelog" \
 WORKBUDDY_RECORD_PATH="data/releases.json" \
 WORKBUDDY_LATEST_PATH="data/latest.json" \
+WORKBUDDY_CHANGELOG_PATH="data/changelog.json" \
 python scripts/record_workbuddy_release.py
 ```
