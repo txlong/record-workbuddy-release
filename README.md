@@ -5,24 +5,15 @@
 ## 最新版本
 
 <!-- workbuddy-latest:start -->
-**当前最新版本：`4.22.10.27634624`**
+**当前最新版本：`4.22.11.27879455`**
 
 最新平台：macOS Apple Silicon, macOS Intel, Windows x64
 
 | 平台 | 最新版本 | 下载 | SHA256 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| macOS Apple Silicon | `4.22.10.27634624` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.10.27634624-ec5e02bd.zip) | `cdbfe4202381` | `2026-05-10T10:21:26Z` |
-| macOS Intel | `4.22.10.27634624` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.10.27634624-ec5e02bd.zip) | `5ee3f94af814` | `2026-05-10T10:21:26Z` |
-| Windows x64 | `4.22.10.27634624` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.10.27634624-ec5e02bd.exe) | - | `2026-05-10T10:21:26Z` |
-
-更新日志：[4.22.10](https://www.codebuddy.cn/docs/workbuddy/Changelog)
-
-- 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类
-- 新增 Windows 网络代理配置支持，解决代理环境下无法使用的问题
-- 新增默认开启操作系统代理开关
-- 新增成长计划"去完成"按钮可跳转到客户端对应功能界面
-- 优化腾讯元宝搜索展示区域，简化为单行灰色文字
-- 修复部分专家身份确认异常的问题
+| macOS Apple Silicon | `4.22.11.27879455` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.11.27879455-593b3a94.zip) | `59d7c14ab8c1` | `2026-05-13T07:56:26Z` |
+| macOS Intel | `4.22.11.27879455` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.11.27879455-593b3a94.zip) | `2cbc6745fc11` | `2026-05-13T07:56:26Z` |
+| Windows x64 | `4.22.11.27879455` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.11.27879455-593b3a94.exe) | - | `2026-05-13T07:56:26Z` |
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
@@ -30,6 +21,9 @@
 <!-- workbuddy-history:start -->
 | 版本 | 平台 | 下载 | 更新日志 | SHA256 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- | --- | --- |
+| `4.22.11.27879455` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.11.27879455-593b3a94.exe) | - | - | `1778602655` | `2026-05-13T07:56:26Z` |
+| `4.22.11.27879455` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.11.27879455-593b3a94.zip) | - | `2cbc6745fc11` | `1778602655` | `2026-05-13T07:56:26Z` |
+| `4.22.11.27879455` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.11.27879455-593b3a94.zip) | - | `59d7c14ab8c1` | `1778602655` | `2026-05-13T07:56:26Z` |
 | `4.22.10.27634624` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.10.27634624-ec5e02bd.exe) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | - | `1778357824` | `2026-05-10T10:21:26Z` |
 | `4.22.10.27634624` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.10.27634624-ec5e02bd.zip) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | `5ee3f94af814` | `1778357824` | `2026-05-10T10:21:26Z` |
 | `4.22.10.27634624` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.10.27634624-ec5e02bd.zip) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | `cdbfe4202381` | `1778357824` | `2026-05-10T10:21:26Z` |
