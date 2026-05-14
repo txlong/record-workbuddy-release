@@ -14,6 +14,15 @@
 | macOS Apple Silicon | `4.22.11.27879455` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.11.27879455-593b3a94.zip) | `59d7c14ab8c1` | `2026-05-13T07:56:26Z` |
 | macOS Intel | `4.22.11.27879455` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.11.27879455-593b3a94.zip) | `2cbc6745fc11` | `2026-05-13T07:56:26Z` |
 | Windows x64 | `4.22.11.27879455` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.11.27879455-593b3a94.exe) | - | `2026-05-13T07:56:26Z` |
+
+更新日志：[4.22.11](https://www.codebuddy.cn/docs/workbuddy/Changelog)
+
+- 修复上下文紧张时提问无响应需手动继续的问题
+- 修复上下文压缩失败后会话卡住的问题
+- 修复危险命令确认时切换 Tab 任务异常结束的问题
+- 修复模型切换不生效的问题
+- 修复企业模型列表无法正常显示的问题
+- 修复 Windows 任务权限模式导致回复中断的问题
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
@@ -21,9 +30,9 @@
 <!-- workbuddy-history:start -->
 | 版本 | 平台 | 下载 | 更新日志 | SHA256 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `4.22.11.27879455` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.11.27879455-593b3a94.exe) | - | - | `1778602655` | `2026-05-13T07:56:26Z` |
-| `4.22.11.27879455` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.11.27879455-593b3a94.zip) | - | `2cbc6745fc11` | `1778602655` | `2026-05-13T07:56:26Z` |
-| `4.22.11.27879455` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.11.27879455-593b3a94.zip) | - | `59d7c14ab8c1` | `1778602655` | `2026-05-13T07:56:26Z` |
+| `4.22.11.27879455` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.11.27879455-593b3a94.exe) | 修复上下文紧张时提问无响应需手动继续的问题 | - | `1778602655` | `2026-05-13T07:56:26Z` |
+| `4.22.11.27879455` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.11.27879455-593b3a94.zip) | 修复上下文紧张时提问无响应需手动继续的问题 | `2cbc6745fc11` | `1778602655` | `2026-05-13T07:56:26Z` |
+| `4.22.11.27879455` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.11.27879455-593b3a94.zip) | 修复上下文紧张时提问无响应需手动继续的问题 | `59d7c14ab8c1` | `1778602655` | `2026-05-13T07:56:26Z` |
 | `4.22.10.27634624` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.10.27634624-ec5e02bd.exe) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | - | `1778357824` | `2026-05-10T10:21:26Z` |
 | `4.22.10.27634624` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.10.27634624-ec5e02bd.zip) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | `5ee3f94af814` | `1778357824` | `2026-05-10T10:21:26Z` |
 | `4.22.10.27634624` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.10.27634624-ec5e02bd.zip) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | `cdbfe4202381` | `1778357824` | `2026-05-10T10:21:26Z` |
