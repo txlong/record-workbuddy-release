@@ -5,24 +5,15 @@
 ## 最新版本
 
 <!-- workbuddy-latest:start -->
-**当前最新版本：`4.22.12.28144878`**
+**当前最新版本：`4.22.14.28167846`**
 
 最新平台：macOS Apple Silicon, macOS Intel, Windows x64
 
 | 平台 | 最新版本 | 下载 | SHA256 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| macOS Apple Silicon | `4.22.12.28144878` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.12.28144878-b48292e2.zip) | `5a52059bb0dd` | `2026-05-15T16:57:02Z` |
-| macOS Intel | `4.22.12.28144878` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.12.28144878-b48292e2.zip) | `08e41658792f` | `2026-05-15T16:57:02Z` |
-| Windows x64 | `4.22.12.28144878` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.12.28144878-b48292e2.exe) | - | `2026-05-15T16:57:02Z` |
-
-更新日志：[4.22.12](https://www.codebuddy.cn/docs/workbuddy/Changelog)
-
-- 新增设置面板网络诊断功能，登录失败时可快速排查网络问题
-- 新增首页连接器卡片接入腾讯会议与企业微信文档
-- 新增连接器市场版本适配能力，自动匹配客户端最低版本要求
-- 新增自动化任务列表模式及部分更新能力
-- 新增对话内容 HTML 分享能力
-- 优化专家团调度能力，支持 Auto 路由与专家身份自动注入
+| macOS Apple Silicon | `4.22.14.28167846` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.14.28167846-33b73f3d.zip) | `d888f77f33e8` | `2026-05-16T11:59:14Z` |
+| macOS Intel | `4.22.14.28167846` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.14.28167846-33b73f3d.zip) | `7544070d6092` | `2026-05-16T11:59:14Z` |
+| Windows x64 | `4.22.14.28167846` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.14.28167846-33b73f3d.exe) | - | `2026-05-16T11:59:14Z` |
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
@@ -30,6 +21,9 @@
 <!-- workbuddy-history:start -->
 | 版本 | 平台 | 下载 | 更新日志 | SHA256 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- | --- | --- |
+| `4.22.14.28167846` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.14.28167846-33b73f3d.exe) | - | - | `1778891046` | `2026-05-16T11:59:14Z` |
+| `4.22.14.28167846` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.14.28167846-33b73f3d.zip) | - | `7544070d6092` | `1778891046` | `2026-05-16T11:59:14Z` |
+| `4.22.14.28167846` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.14.28167846-33b73f3d.zip) | - | `d888f77f33e8` | `1778891046` | `2026-05-16T11:59:14Z` |
 | `4.22.12.28144878` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.12.28144878-b48292e2.exe) | 新增设置面板网络诊断功能，登录失败时可快速排查网络问题 | - | `1778868078` | `2026-05-15T16:57:02Z` |
 | `4.22.12.28144878` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.12.28144878-b48292e2.zip) | 新增设置面板网络诊断功能，登录失败时可快速排查网络问题 | `08e41658792f` | `1778868078` | `2026-05-15T16:57:02Z` |
 | `4.22.12.28144878` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.12.28144878-b48292e2.zip) | 新增设置面板网络诊断功能，登录失败时可快速排查网络问题 | `5a52059bb0dd` | `1778868078` | `2026-05-15T16:57:02Z` |
