@@ -5,20 +5,15 @@
 ## 最新版本
 
 <!-- workbuddy-latest:start -->
-**当前最新版本：`4.22.16.28604695`**
+**当前最新版本：`4.24.1.29012054`**
 
 最新平台：macOS Apple Silicon, macOS Intel, Windows x64
 
 | 平台 | 最新版本 | 下载 | SHA256 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| macOS Apple Silicon | `4.22.16.28604695` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.16.28604695-d6e0fd20.zip) | `09d685e8c7e3` | `2026-05-21T05:14:56Z` |
-| macOS Intel | `4.22.16.28604695` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.16.28604695-d6e0fd20.zip) | `f8e8ba53a2a8` | `2026-05-21T05:14:56Z` |
-| Windows x64 | `4.22.16.28604695` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.16.28604695-d6e0fd20.exe) | - | `2026-05-21T05:14:56Z` |
-
-更新日志：[4.22.16](https://www.codebuddy.cn/docs/workbuddy/Changelog)
-
-- 修复部分场景下自定义模型可能请求失败的问题
-- 修复部分场景下内置技能加载失败导致技能不可用的问题
+| macOS Apple Silicon | `4.24.1.29012054` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.1.29012054-dd5bfae4.zip) | `176f90b141e3` | `2026-05-26T16:50:09Z` |
+| macOS Intel | `4.24.1.29012054` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.1.29012054-dd5bfae4.zip) | `3ce0ac24fda8` | `2026-05-26T16:50:09Z` |
+| Windows x64 | `4.24.1.29012054` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.1.29012054-dd5bfae4.exe) | - | `2026-05-26T16:50:09Z` |
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
@@ -26,6 +21,9 @@
 <!-- workbuddy-history:start -->
 | 版本 | 平台 | 下载 | 更新日志 | SHA256 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- | --- | --- |
+| `4.24.1.29012054` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.1.29012054-dd5bfae4.exe) | - | - | `1779735254` | `2026-05-26T16:50:09Z` |
+| `4.24.1.29012054` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.1.29012054-dd5bfae4.zip) | - | `3ce0ac24fda8` | `1779735254` | `2026-05-26T16:50:09Z` |
+| `4.24.1.29012054` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.1.29012054-dd5bfae4.zip) | - | `176f90b141e3` | `1779735254` | `2026-05-26T16:50:09Z` |
 | `4.22.16.28604695` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.16.28604695-d6e0fd20.exe) | 修复部分场景下自定义模型可能请求失败的问题 | - | `1779327895` | `2026-05-21T05:14:56Z` |
 | `4.22.16.28604695` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.16.28604695-d6e0fd20.zip) | 修复部分场景下自定义模型可能请求失败的问题 | `f8e8ba53a2a8` | `1779327895` | `2026-05-21T05:14:56Z` |
 | `4.22.16.28604695` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.16.28604695-d6e0fd20.zip) | 修复部分场景下自定义模型可能请求失败的问题 | `09d685e8c7e3` | `1779327895` | `2026-05-21T05:14:56Z` |
