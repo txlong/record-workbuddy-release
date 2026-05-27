@@ -14,6 +14,15 @@
 | macOS Apple Silicon | `4.24.1.29012054` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.1.29012054-dd5bfae4.zip) | `176f90b141e3` | `2026-05-26T16:50:09Z` |
 | macOS Intel | `4.24.1.29012054` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.1.29012054-dd5bfae4.zip) | `3ce0ac24fda8` | `2026-05-26T16:50:09Z` |
 | Windows x64 | `4.24.1.29012054` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.1.29012054-dd5bfae4.exe) | - | `2026-05-26T16:50:09Z` |
+
+更新日志：[4.24.1](https://www.codebuddy.cn/docs/workbuddy/Changelog)
+
+- 优化「我分享的任务」列表，移除分享次数列并修正入口文案
+- 优化自动化任务删除流程，减少不必要的审批确认
+- 优化专家团协作任务调度，降低多子任务并发导致响应变慢或失控的概率
+- 优化沙箱低风险路径识别，减少 Windows 应用安装和诊断目录操作被误拦截
+- 优化文件读取循环检测阈值，降低正常读取大文件时被误中断的概率
+- 修复企业微信开关关闭再开启后，消息推送可能被误拒的问题
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
@@ -21,9 +30,9 @@
 <!-- workbuddy-history:start -->
 | 版本 | 平台 | 下载 | 更新日志 | SHA256 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `4.24.1.29012054` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.1.29012054-dd5bfae4.exe) | - | - | `1779735254` | `2026-05-26T16:50:09Z` |
-| `4.24.1.29012054` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.1.29012054-dd5bfae4.zip) | - | `3ce0ac24fda8` | `1779735254` | `2026-05-26T16:50:09Z` |
-| `4.24.1.29012054` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.1.29012054-dd5bfae4.zip) | - | `176f90b141e3` | `1779735254` | `2026-05-26T16:50:09Z` |
+| `4.24.1.29012054` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.1.29012054-dd5bfae4.exe) | 优化「我分享的任务」列表，移除分享次数列并修正入口文案 | - | `1779735254` | `2026-05-26T16:50:09Z` |
+| `4.24.1.29012054` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.1.29012054-dd5bfae4.zip) | 优化「我分享的任务」列表，移除分享次数列并修正入口文案 | `3ce0ac24fda8` | `1779735254` | `2026-05-26T16:50:09Z` |
+| `4.24.1.29012054` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.1.29012054-dd5bfae4.zip) | 优化「我分享的任务」列表，移除分享次数列并修正入口文案 | `176f90b141e3` | `1779735254` | `2026-05-26T16:50:09Z` |
 | `4.22.16.28604695` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.16.28604695-d6e0fd20.exe) | 修复部分场景下自定义模型可能请求失败的问题 | - | `1779327895` | `2026-05-21T05:14:56Z` |
 | `4.22.16.28604695` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.16.28604695-d6e0fd20.zip) | 修复部分场景下自定义模型可能请求失败的问题 | `f8e8ba53a2a8` | `1779327895` | `2026-05-21T05:14:56Z` |
 | `4.22.16.28604695` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.16.28604695-d6e0fd20.zip) | 修复部分场景下自定义模型可能请求失败的问题 | `09d685e8c7e3` | `1779327895` | `2026-05-21T05:14:56Z` |
