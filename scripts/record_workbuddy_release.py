@@ -28,6 +28,7 @@ DEFAULT_LATEST_PATH = "data/latest.json"
 DEFAULT_README_PATH = "README.md"
 DEFAULT_CHANGELOG_PATH = "data/changelog.json"
 DEFAULT_CHANGELOG_URL = "https://www.codebuddy.cn/docs/workbuddy/Changelog"
+DEFAULT_README_HISTORY_LIMIT = 10
 REQUIRED_FIELDS = ("version", "url", "productVersion", "sha256hash", "timestamp")
 README_START_MARKER = "<!-- workbuddy-latest:start -->"
 README_END_MARKER = "<!-- workbuddy-latest:end -->"
@@ -369,6 +370,49 @@ def markdown_link(label: str, url: str) -> str:
     return f"[{label}]({url})"
 
 
+def markdown_table_cell(value: Any) -> str:
+    return str(value).replace("|", "\\|").replace("\n", "<br>")
+
+
+def grouped_records_by_version(records: list[Any]) -> list[dict[str, Any]]:
+    groups: dict[str, dict[str, Any]] = {}
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        release = record.get("release")
+        if not isinstance(release, dict):
+            continue
+        version = release_version(release)
+        if not version:
+            continue
+
+        group = groups.setdefault(
+            version,
+            {
+                "version": version,
+                "records": [],
+                "timestamp": 0,
+                "firstSeenAt": "",
+            },
+        )
+        group["records"].append(record)
+        group["timestamp"] = max(int(group["timestamp"]), record_timestamp(record))
+
+        first_seen = str(record.get("firstSeenAt") or "")
+        if first_seen and (not group["firstSeenAt"] or first_seen < group["firstSeenAt"]):
+            group["firstSeenAt"] = first_seen
+
+    return sorted(
+        groups.values(),
+        key=lambda item: (
+            int(item["timestamp"]),
+            str(item["firstSeenAt"]),
+            str(item["version"]),
+        ),
+        reverse=True,
+    )
+
+
 def render_latest_section(records: list[Any], changelog: dict[str, Any]) -> str:
     latest = latest_records_by_platform(records)
     valid_records = [record for record in latest.values() if isinstance(record.get("release"), dict)]
@@ -439,46 +483,42 @@ def render_latest_section(records: list[Any], changelog: dict[str, Any]) -> str:
     return f"{README_START_MARKER}\n{body}\n{README_END_MARKER}"
 
 
-def render_history_section(records: list[Any], changelog: dict[str, Any]) -> str:
-    valid_records = [
-        record
-        for record in records
-        if isinstance(record, dict) and isinstance(record.get("release"), dict)
-    ]
-    if not valid_records:
+def render_history_section(records: list[Any], changelog: dict[str, Any], limit: int) -> str:
+    version_groups = grouped_records_by_version(records)
+    if not version_groups:
         body = "_暂无历史版本记录。_"
     else:
+        visible_groups = version_groups[:limit]
+        hidden_count = max(len(version_groups) - len(visible_groups), 0)
         rows = [
-            "| 版本 | 平台 | 下载 | 更新日志 | SHA256 | 接口时间戳 | 首次记录 |",
-            "| --- | --- | --- | --- | --- | --- | --- |",
+            "| 版本 | 平台下载 | 更新日志 | 接口时间戳 | 首次记录 |",
+            "| --- | --- | --- | --- | --- |",
         ]
-        for record in sorted(
-            valid_records,
-            key=lambda item: (
-                record_timestamp(item),
-                str(item.get("firstSeenAt") or ""),
-                str(item.get("platform") or ""),
-            ),
-            reverse=True,
-        ):
-            release = record["release"]
-            platform = str(record.get("platform") or "")
-            version = release_version(release)
-            url = str(release.get("url") or "").strip()
+        for group in visible_groups:
+            version = str(group["version"])
+            platform_links = []
+            for record in sorted(group["records"], key=lambda item: str(item.get("platform") or "")):
+                release = record["release"]
+                platform = str(record.get("platform") or "")
+                url = str(release.get("url") or "").strip()
+                platform_links.append(f"{platform_label(platform)}: {markdown_link('下载', url)}")
             changes = changelog_items(changelog, version, 1)
             change_summary = changes[0] if changes else "-"
             rows.append(
-                "| {version} | {platform} | {link} | {change_summary} | {sha256} | `{timestamp}` | `{first_seen}` |".format(
+                "| {version} | {platform_links} | {change_summary} | `{timestamp}` | `{first_seen}` |".format(
                     version=f"`{version}`" if version else "-",
-                    platform=platform_label(platform),
-                    link=markdown_link("下载", url),
-                    change_summary=change_summary,
-                    sha256=short_hash(release.get("sha256hash")),
-                    timestamp=release.get("timestamp") or "-",
-                    first_seen=record.get("firstSeenAt") or "-",
+                    platform_links=markdown_table_cell("<br>".join(platform_links)),
+                    change_summary=markdown_table_cell(change_summary),
+                    timestamp=group["timestamp"] or "-",
+                    first_seen=group["firstSeenAt"] or "-",
                 )
             )
-        body = "\n".join(rows)
+        if hidden_count:
+            note = f"仅展示最近 {len(visible_groups)} 个版本；完整逐平台历史记录见 `data/releases.json`。"
+            note += f" 另有 {hidden_count} 个更早版本未在 README 展开。"
+        else:
+            note = f"当前共 {len(visible_groups)} 个版本；完整逐平台历史记录见 `data/releases.json`。"
+        body = "\n".join([note, "", *rows])
 
     return f"{README_HISTORY_START_MARKER}\n{body}\n{README_HISTORY_END_MARKER}"
 
@@ -504,13 +544,13 @@ def replace_marked_section(
     return f"{content.rstrip()}\n\n## {heading}\n\n{section}\n"
 
 
-def update_readme(readme_path: Path, records: list[Any], changelog: dict[str, Any]) -> bool:
+def update_readme(readme_path: Path, records: list[Any], changelog: dict[str, Any], history_limit: int) -> bool:
     if not readme_path.exists():
         return False
 
     content = readme_path.read_text(encoding="utf-8")
     latest_section = render_latest_section(records, changelog)
-    history_section = render_history_section(records, changelog)
+    history_section = render_history_section(records, changelog, history_limit)
 
     first_block_end = content.find("\n\n")
     intro_end = content.find("\n\n", first_block_end + 2) if first_block_end != -1 else -1
@@ -550,7 +590,14 @@ def main() -> int:
     parser.add_argument("--changelog-path", default=os.getenv("WORKBUDDY_CHANGELOG_PATH", DEFAULT_CHANGELOG_PATH))
     parser.add_argument("--changelog-url", default=os.getenv("WORKBUDDY_CHANGELOG_URL", DEFAULT_CHANGELOG_URL))
     parser.add_argument("--timeout", type=int, default=int(os.getenv("WORKBUDDY_TIMEOUT", "30")))
+    parser.add_argument(
+        "--readme-history-limit",
+        type=int,
+        default=int(os.getenv("WORKBUDDY_README_HISTORY_LIMIT", str(DEFAULT_README_HISTORY_LIMIT))),
+        help="Maximum number of versions to show in the README history table.",
+    )
     args = parser.parse_args()
+    history_limit = max(args.readme_history_limit, 1)
 
     platform_values = args.platform or [os.getenv("WORKBUDDY_PLATFORMS", ",".join(DEFAULT_PLATFORMS))]
     platforms = parse_platforms(platform_values)
@@ -604,7 +651,7 @@ def main() -> int:
         records,
     )
     changelog_changed = load_changelog(changelog_path) != changelog
-    readme_changed = update_readme(readme_path, records, changelog)
+    readme_changed = update_readme(readme_path, records, changelog, history_limit)
 
     if not changed and not readme_changed and not changelog_changed:
         return 0

@@ -28,32 +28,18 @@
 ## 历史版本
 
 <!-- workbuddy-history:start -->
-| 版本 | 平台 | 下载 | 更新日志 | SHA256 | 接口时间戳 | 首次记录 |
-| --- | --- | --- | --- | --- | --- | --- |
-| `4.24.1.29012054` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.1.29012054-dd5bfae4.exe) | 优化「我分享的任务」列表，移除分享次数列并修正入口文案 | - | `1779735254` | `2026-05-26T16:50:09Z` |
-| `4.24.1.29012054` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.1.29012054-dd5bfae4.zip) | 优化「我分享的任务」列表，移除分享次数列并修正入口文案 | `3ce0ac24fda8` | `1779735254` | `2026-05-26T16:50:09Z` |
-| `4.24.1.29012054` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.1.29012054-dd5bfae4.zip) | 优化「我分享的任务」列表，移除分享次数列并修正入口文案 | `176f90b141e3` | `1779735254` | `2026-05-26T16:50:09Z` |
-| `4.22.16.28604695` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.16.28604695-d6e0fd20.exe) | 修复部分场景下自定义模型可能请求失败的问题 | - | `1779327895` | `2026-05-21T05:14:56Z` |
-| `4.22.16.28604695` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.16.28604695-d6e0fd20.zip) | 修复部分场景下自定义模型可能请求失败的问题 | `f8e8ba53a2a8` | `1779327895` | `2026-05-21T05:14:56Z` |
-| `4.22.16.28604695` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.16.28604695-d6e0fd20.zip) | 修复部分场景下自定义模型可能请求失败的问题 | `09d685e8c7e3` | `1779327895` | `2026-05-21T05:14:56Z` |
-| `4.22.15.28494097` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.15.28494097-a145005c.exe) | 新增专家 / 专家团可见性配置，支持按内外网环境控制展示范围 | - | `1779217297` | `2026-05-20T08:33:17Z` |
-| `4.22.15.28494097` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.15.28494097-a145005c.zip) | 新增专家 / 专家团可见性配置，支持按内外网环境控制展示范围 | `302164757303` | `1779217297` | `2026-05-20T08:33:17Z` |
-| `4.22.15.28494097` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.15.28494097-a145005c.zip) | 新增专家 / 专家团可见性配置，支持按内外网环境控制展示范围 | `16e5a34b7805` | `1779217297` | `2026-05-20T08:33:17Z` |
-| `4.22.14.28167846` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.14.28167846-33b73f3d.exe) | 新增产物分享至微信能力，可在产物预览面板生成二维码，使用微信扫码即可查看分享内容 | - | `1778891046` | `2026-05-16T11:59:14Z` |
-| `4.22.14.28167846` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.14.28167846-33b73f3d.zip) | 新增产物分享至微信能力，可在产物预览面板生成二维码，使用微信扫码即可查看分享内容 | `7544070d6092` | `1778891046` | `2026-05-16T11:59:14Z` |
-| `4.22.14.28167846` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.14.28167846-33b73f3d.zip) | 新增产物分享至微信能力，可在产物预览面板生成二维码，使用微信扫码即可查看分享内容 | `d888f77f33e8` | `1778891046` | `2026-05-16T11:59:14Z` |
-| `4.22.12.28144878` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.12.28144878-b48292e2.exe) | 新增设置面板网络诊断功能，登录失败时可快速排查网络问题 | - | `1778868078` | `2026-05-15T16:57:02Z` |
-| `4.22.12.28144878` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.12.28144878-b48292e2.zip) | 新增设置面板网络诊断功能，登录失败时可快速排查网络问题 | `08e41658792f` | `1778868078` | `2026-05-15T16:57:02Z` |
-| `4.22.12.28144878` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.12.28144878-b48292e2.zip) | 新增设置面板网络诊断功能，登录失败时可快速排查网络问题 | `5a52059bb0dd` | `1778868078` | `2026-05-15T16:57:02Z` |
-| `4.22.11.27879455` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.11.27879455-593b3a94.exe) | 修复上下文紧张时提问无响应需手动继续的问题 | - | `1778602655` | `2026-05-13T07:56:26Z` |
-| `4.22.11.27879455` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.11.27879455-593b3a94.zip) | 修复上下文紧张时提问无响应需手动继续的问题 | `2cbc6745fc11` | `1778602655` | `2026-05-13T07:56:26Z` |
-| `4.22.11.27879455` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.11.27879455-593b3a94.zip) | 修复上下文紧张时提问无响应需手动继续的问题 | `59d7c14ab8c1` | `1778602655` | `2026-05-13T07:56:26Z` |
-| `4.22.10.27634624` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.10.27634624-ec5e02bd.exe) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | - | `1778357824` | `2026-05-10T10:21:26Z` |
-| `4.22.10.27634624` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.10.27634624-ec5e02bd.zip) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | `5ee3f94af814` | `1778357824` | `2026-05-10T10:21:26Z` |
-| `4.22.10.27634624` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.10.27634624-ec5e02bd.zip) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | `cdbfe4202381` | `1778357824` | `2026-05-10T10:21:26Z` |
-| `4.22.7.27539150` | Windows x64 | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.7.27539150-6dc48069.exe) | 新增系统代理自动检测并默认启用，解决代理环境下登录失败的问题 | - | `1778262350` | `2026-05-09T09:21:15Z` |
-| `4.22.7.27539150` | macOS Intel | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.7.27539150-6dc48069.zip) | 新增系统代理自动检测并默认启用，解决代理环境下登录失败的问题 | `e7949d1b4577` | `1778262350` | `2026-05-09T09:21:15Z` |
-| `4.22.7.27539150` | macOS Apple Silicon | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.7.27539150-6dc48069.zip) | 新增系统代理自动检测并默认启用，解决代理环境下登录失败的问题 | `da3b155c24bf` | `1778262350` | `2026-05-09T09:15:55Z` |
+当前共 8 个版本；完整逐平台历史记录见 `data/releases.json`。
+
+| 版本 | 平台下载 | 更新日志 | 接口时间戳 | 首次记录 |
+| --- | --- | --- | --- | --- |
+| `4.24.1.29012054` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.1.29012054-dd5bfae4.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.1.29012054-dd5bfae4.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.1.29012054-dd5bfae4.exe) | 优化「我分享的任务」列表，移除分享次数列并修正入口文案 | `1779735254` | `2026-05-26T16:50:09Z` |
+| `4.22.16.28604695` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.16.28604695-d6e0fd20.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.16.28604695-d6e0fd20.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.16.28604695-d6e0fd20.exe) | 修复部分场景下自定义模型可能请求失败的问题 | `1779327895` | `2026-05-21T05:14:56Z` |
+| `4.22.15.28494097` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.15.28494097-a145005c.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.15.28494097-a145005c.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.15.28494097-a145005c.exe) | 新增专家 / 专家团可见性配置，支持按内外网环境控制展示范围 | `1779217297` | `2026-05-20T08:33:17Z` |
+| `4.22.14.28167846` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.14.28167846-33b73f3d.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.14.28167846-33b73f3d.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.14.28167846-33b73f3d.exe) | 新增产物分享至微信能力，可在产物预览面板生成二维码，使用微信扫码即可查看分享内容 | `1778891046` | `2026-05-16T11:59:14Z` |
+| `4.22.12.28144878` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.12.28144878-b48292e2.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.12.28144878-b48292e2.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.12.28144878-b48292e2.exe) | 新增设置面板网络诊断功能，登录失败时可快速排查网络问题 | `1778868078` | `2026-05-15T16:57:02Z` |
+| `4.22.11.27879455` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.11.27879455-593b3a94.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.11.27879455-593b3a94.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.11.27879455-593b3a94.exe) | 修复上下文紧张时提问无响应需手动继续的问题 | `1778602655` | `2026-05-13T07:56:26Z` |
+| `4.22.10.27634624` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.10.27634624-ec5e02bd.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.10.27634624-ec5e02bd.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.10.27634624-ec5e02bd.exe) | 新增专家/专家团分类展示，支持按类别筛选并新增 OPC 分类 | `1778357824` | `2026-05-10T10:21:26Z` |
+| `4.22.7.27539150` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.7.27539150-6dc48069.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.7.27539150-6dc48069.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.7.27539150-6dc48069.exe) | 新增系统代理自动检测并默认启用，解决代理环境下登录失败的问题 | `1778262350` | `2026-05-09T09:15:55Z` |
 <!-- workbuddy-history:end -->
 
 默认接口模板：
@@ -72,7 +58,7 @@ workbuddy-win32-x64-user
 
 ## 记录文件
 
-- `README.md`：顶部自动展示“最新版本”和“历史版本”列表，方便直接在 GitHub 项目首页查看。
+- `README.md`：顶部自动展示“最新版本”和精简后的“历史版本”摘要，方便直接在 GitHub 项目首页查看。
 - `data/releases.json`：历史版本记录。脚本会按 `platform + sha256hash` 去重；如果没有 `sha256hash`，则使用 `platform + version + productVersion + url` 去重。
 - `data/latest.json`：最近一次发生写入时，各平台的接口返回内容和记录时间。
 - `data/changelog.json`：从官方 WorkBuddy 更新日志解析出的版本说明缓存，只保留已记录版本对应的条目。
@@ -118,5 +104,6 @@ WORKBUDDY_CHANGELOG_URL="https://www.codebuddy.cn/docs/workbuddy/Changelog" \
 WORKBUDDY_RECORD_PATH="data/releases.json" \
 WORKBUDDY_LATEST_PATH="data/latest.json" \
 WORKBUDDY_CHANGELOG_PATH="data/changelog.json" \
+WORKBUDDY_README_HISTORY_LIMIT="10" \
 python scripts/record_workbuddy_release.py
 ```
