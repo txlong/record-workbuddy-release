@@ -5,28 +5,25 @@
 ## 最新版本
 
 <!-- workbuddy-latest:start -->
-**当前最新版本：`4.24.7.29589271`**
+**当前最新版本：`4.24.8.29724905`**
 
 最新平台：macOS Apple Silicon, macOS Intel, Windows x64
 
 | 平台 | 最新版本 | 下载 | SHA256 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| macOS Apple Silicon | `4.24.7.29589271` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.7.29589271-f87d79a5.zip) | `f365d984d657` | `2026-06-01T11:52:22Z` |
-| macOS Intel | `4.24.7.29589271` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.7.29589271-f87d79a5.zip) | `9242a20c0108` | `2026-06-01T11:52:22Z` |
-| Windows x64 | `4.24.7.29589271` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.7.29589271-f87d79a5.exe) | - | `2026-06-01T11:52:22Z` |
-
-更新日志：[4.24.7](https://www.codebuddy.cn/docs/workbuddy/Changelog)
-
-- 修复部分自动化定时任务跑过一次后卡在"即将开始"、无法再次触发的问题
+| macOS Apple Silicon | `4.24.8.29724905` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.8.29724905-8d20aed6.zip) | `380d394f2fe2` | `2026-06-03T05:04:32Z` |
+| macOS Intel | `4.24.8.29724905` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.8.29724905-8d20aed6.zip) | `cdde33464cd0` | `2026-06-03T05:04:32Z` |
+| Windows x64 | `4.24.8.29724905` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.8.29724905-8d20aed6.exe) | - | `2026-06-03T05:04:32Z` |
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
 
 <!-- workbuddy-history:start -->
-仅展示最近 10 个版本；完整逐平台历史记录见 `data/releases.json`。 另有 2 个更早版本未在 README 展开。
+仅展示最近 10 个版本；完整逐平台历史记录见 `data/releases.json`。 另有 3 个更早版本未在 README 展开。
 
 | 版本 | 平台下载 | 更新日志 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- |
+| `4.24.8.29724905` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.8.29724905-8d20aed6.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.8.29724905-8d20aed6.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.8.29724905-8d20aed6.exe) | - | `1780448105` | `2026-06-03T05:04:32Z` |
 | `4.24.7.29589271` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.7.29589271-f87d79a5.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.7.29589271-f87d79a5.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.7.29589271-f87d79a5.exe) | 修复部分自动化定时任务跑过一次后卡在"即将开始"、无法再次触发的问题 | `1780312471` | `2026-06-01T11:52:22Z` |
 | `4.24.5.29470881` | Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.5.29470881-8666543c.exe) | - | `1780194081` | `2026-06-01T18:13:17Z` |
 | `4.24.3.29355504` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.3.29355504-8711449a.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.3.29355504-8711449a.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.3.29355504-8711449a.exe) | 优化会话列表，隐藏专家团子成员与展开箭头，列表更聚焦 | `1780078704` | `2026-05-30T10:09:07Z` |
@@ -36,7 +33,6 @@
 | `4.22.15.28494097` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.15.28494097-a145005c.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.15.28494097-a145005c.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.15.28494097-a145005c.exe) | 新增专家 / 专家团可见性配置，支持按内外网环境控制展示范围 | `1779217297` | `2026-05-20T08:33:17Z` |
 | `4.22.14.28167846` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.14.28167846-33b73f3d.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.14.28167846-33b73f3d.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.14.28167846-33b73f3d.exe) | 新增产物分享至微信能力，可在产物预览面板生成二维码，使用微信扫码即可查看分享内容 | `1778891046` | `2026-05-16T11:59:14Z` |
 | `4.22.12.28144878` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.12.28144878-b48292e2.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.12.28144878-b48292e2.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.12.28144878-b48292e2.exe) | 新增设置面板网络诊断功能，登录失败时可快速排查网络问题 | `1778868078` | `2026-05-15T16:57:02Z` |
-| `4.22.11.27879455` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.22.11.27879455-593b3a94.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.22.11.27879455-593b3a94.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.22.11.27879455-593b3a94.exe) | 修复上下文紧张时提问无响应需手动继续的问题 | `1778602655` | `2026-05-13T07:56:26Z` |
 <!-- workbuddy-history:end -->
 
 默认接口模板：
