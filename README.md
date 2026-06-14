@@ -14,6 +14,10 @@
 | macOS Apple Silicon | `5.0.5.30547054` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.0.5.30547054-ac1b5bd1.zip) | `9951463fd3f6` | `2026-06-13T08:29:11Z` |
 | macOS Intel | `5.0.5.30547054` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.0.5.30547054-ac1b5bd1.zip) | `7a396c821e0d` | `2026-06-13T08:29:11Z` |
 | Windows x64 | `5.0.5.30547054` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.0.5.30547054-ac1b5bd1.exe) | - | `2026-06-13T08:29:11Z` |
+
+更新日志：[5.0.5](https://www.codebuddy.cn/docs/workbuddy/Changelog)
+
+- 修复模型切换后再切换会话时，模型选择与记忆状态可能丢失的问题
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
@@ -23,7 +27,7 @@
 
 | 版本 | 平台下载 | 更新日志 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| `5.0.5.30547054` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.0.5.30547054-ac1b5bd1.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.0.5.30547054-ac1b5bd1.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.0.5.30547054-ac1b5bd1.exe) | - | `1781270254` | `2026-06-13T08:29:11Z` |
+| `5.0.5.30547054` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.0.5.30547054-ac1b5bd1.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.0.5.30547054-ac1b5bd1.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.0.5.30547054-ac1b5bd1.exe) | 修复模型切换后再切换会话时，模型选择与记忆状态可能丢失的问题 | `1781270254` | `2026-06-13T08:29:11Z` |
 | `5.0.3.30150715` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.0.3.30150715-f5a1d06d.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.0.3.30150715-f5a1d06d.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.0.3.30150715-f5a1d06d.exe) | 新增腾讯文档个人版导入能力，支持导入后自动刷新文档列表，导入 0B/超大文件后可正常重试 | `1780873915` | `2026-06-09T08:37:47Z` |
 | `5.0.2.29916712` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.0.2.29916712-0ce39ce2.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.0.2.29916712-0ce39ce2.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.0.2.29916712-0ce39ce2.exe) | 新增沙箱安全开关设置，支持快速调整文件读写拦截策略 | `1780639912` | `2026-06-05T08:49:52Z` |
 | `4.24.8.29724905` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-4.24.8.29724905-8d20aed6.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-4.24.8.29724905-8d20aed6.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-4.24.8.29724905-8d20aed6.exe) | 修复上下文压缩相关异常：偶现自动取消、压缩失败后加载动画一直转、回放出现重复分隔线、压缩后历史漂移或丢失 | `1780448105` | `2026-06-03T05:04:32Z` |
