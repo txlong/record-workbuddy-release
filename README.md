@@ -14,6 +14,15 @@
 | macOS Apple Silicon | `5.2.3.32357678` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.2.3.32357678-3865830d.zip) | `a69de8ece470` | `2026-07-07T05:00:30Z` |
 | macOS Intel | `5.2.3.32357678` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.2.3.32357678-3865830d.zip) | `8d33e18d8ec6` | `2026-07-07T05:00:30Z` |
 | Windows x64 | `5.2.3.32357678` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.2.3.32357678-3865830d.exe) | - | `2026-07-07T05:00:30Z` |
+
+更新日志：[5.2.3](https://www.codebuddy.cn/docs/workbuddy/Changelog)
+
+- 新增模型夜间折扣展示，费用信息更透明
+- 优化腾讯文档授权流程，减少登录和授权失败
+- 优化输入框工具栏折叠与发送后高度恢复，小窗口输入体验更稳定
+- 优化云助理工具卡头像、会话展示与创建助理时的仓库/分支选择体验
+- 修复弱网断连后下一轮对话无法恢复的问题
+- 修复 Claw 多端对话消息错发、MCP 会话丢失后无法恢复的问题
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
@@ -23,7 +32,7 @@
 
 | 版本 | 平台下载 | 更新日志 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| `5.2.3.32357678` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.2.3.32357678-3865830d.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.2.3.32357678-3865830d.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.2.3.32357678-3865830d.exe) | - | `1783080878` | `2026-07-07T05:00:30Z` |
+| `5.2.3.32357678` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.2.3.32357678-3865830d.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.2.3.32357678-3865830d.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.2.3.32357678-3865830d.exe) | 新增模型夜间折扣展示，费用信息更透明 | `1783080878` | `2026-07-07T05:00:30Z` |
 | `5.1.7.31711488` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.1.7.31711488-dc01bf2f.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.1.7.31711488-dc01bf2f.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.1.7.31711488-dc01bf2f.exe) | 修复设计创意模式画布刷新按钮点了没反应的问题 | `1782434688` | `2026-06-27T04:10:45Z` |
 | `5.1.6.31448847` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.1.6.31448847-0db69b64.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.1.6.31448847-0db69b64.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.1.6.31448847-0db69b64.exe) | 新增财报数据（finance-data）内置技能，原插件市场对应插件已下架并自动清理已安装条目 | `1782172047` | `2026-06-24T11:51:48Z` |
 | `5.1.5.31270648` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.1.5.31270648-a1798eab.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.1.5.31270648-a1798eab.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.1.5.31270648-a1798eab.exe) | 优化产物面板展示，最多显示 6 条记录，超出部分通过「查看全部」入口访问 | `1781993848` | `2026-06-22T12:21:34Z` |
