@@ -1596,5 +1596,56 @@
     },
     "releaseKey": "workbuddy-win32-x64-user|release:5.3.13.35923969|5.3.13.35923969|https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.13.35923969-20fd9da5.exe",
     "source": "https://www.codebuddy.cn/v2/update?platform=workbuddy-win32-x64-user"
+  },
+  {
+    "firstSeenAt": "2026-08-18T06:56:20Z",
+    "lastSeenAt": "2026-08-18T06:56:20Z",
+    "platform": "workbuddy-darwin-arm64",
+    "release": {
+      "hash": "",
+      "name": "",
+      "productVersion": "5.3.14.36279234",
+      "sha256hash": "a7c18fecd2939f8bd7a00ab5accdd905dbc5bbd5927291c9c5762541c1bd6a61",
+      "supportsFastUpdate": false,
+      "timestamp": 1787002434,
+      "url": "https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.3.14.36279234-825709d4.zip",
+      "version": "5.3.14.36279234"
+    },
+    "releaseKey": "workbuddy-darwin-arm64|sha256:a7c18fecd2939f8bd7a00ab5accdd905dbc5bbd5927291c9c5762541c1bd6a61",
+    "source": "https://www.codebuddy.cn/v2/update?platform=workbuddy-darwin-arm64"
+  },
+  {
+    "firstSeenAt": "2026-08-18T06:56:20Z",
+    "lastSeenAt": "2026-08-18T06:56:20Z",
+    "platform": "workbuddy-darwin-x64",
+    "release": {
+      "hash": "",
+      "name": "",
+      "productVersion": "5.3.14.36279234",
+      "sha256hash": "25fe856763ff917e3086135f445c1016085ef7130433661994840e7a4c0a09ce",
+      "supportsFastUpdate": false,
+      "timestamp": 1787002434,
+      "url": "https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.3.14.36279234-825709d4.zip",
+      "version": "5.3.14.36279234"
+    },
+    "releaseKey": "workbuddy-darwin-x64|sha256:25fe856763ff917e3086135f445c1016085ef7130433661994840e7a4c0a09ce",
+    "source": "https://www.codebuddy.cn/v2/update?platform=workbuddy-darwin-x64"
+  },
+  {
+    "firstSeenAt": "2026-08-18T06:56:20Z",
+    "lastSeenAt": "2026-08-18T06:56:20Z",
+    "platform": "workbuddy-win32-x64-user",
+    "release": {
+      "hash": "",
+      "name": "",
+      "productVersion": "5.3.14.36279234",
+      "sha256hash": "",
+      "supportsFastUpdate": false,
+      "timestamp": 1787002434,
+      "url": "https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.14.36279234-825709d4.exe",
+      "version": "5.3.14.36279234"
+    },
+    "releaseKey": "workbuddy-win32-x64-user|release:5.3.14.36279234|5.3.14.36279234|https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.14.36279234-825709d4.exe",
+    "source": "https://www.codebuddy.cn/v2/update?platform=workbuddy-win32-x64-user"
   }
 ]
