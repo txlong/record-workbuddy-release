@@ -5,33 +5,32 @@
 ## 最新版本
 
 <!-- workbuddy-latest:start -->
-**当前最新版本：`5.4.5.37398844`**
+**当前最新版本：`5.4.7.37521366`**
 
 最新平台：macOS Apple Silicon, macOS Intel, Windows x64
 
 | 平台 | 最新版本 | 下载 | SHA256 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| macOS Apple Silicon | `5.4.5.37398844` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.4.5.37398844-33ba13eb.zip) | `ed4b35463175` | `2026-08-31T17:00:33Z` |
-| macOS Intel | `5.4.5.37398844` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.4.5.37398844-33ba13eb.zip) | `1c11c3384cf9` | `2026-08-31T17:00:33Z` |
-| Windows x64 | `5.4.5.37398844` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.4.5.37398844-33ba13eb.exe) | - | `2026-08-31T17:00:33Z` |
+| macOS Apple Silicon | `5.4.7.37521366` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.4.7.37521366-b148bd1d.zip) | `4ddebbda8f9e` | `2026-09-01T07:40:22Z` |
+| macOS Intel | `5.4.7.37521366` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.4.7.37521366-b148bd1d.zip) | `cd72489d8a72` | `2026-09-01T07:40:22Z` |
+| Windows x64 | `5.4.7.37521366` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.4.7.37521366-b148bd1d.exe) | - | `2026-09-01T07:40:22Z` |
 
-更新日志：[5.4.5](https://www.codebuddy.cn/docs/workbuddy/Changelog)
+更新日志：[5.4.7](https://www.codebuddy.cn/docs/workbuddy/Changelog)
 
-- 个人面板新增「记忆与进化」快捷入口，可直接进入个性化记忆设置
-- 优化模型档位记忆，思考强度与上下文长度可按会话保存，切换任务或重启后仍保持原选择
-- 提升长对话浏览与切换流畅度，返回仍在生成的会话时可补齐离开期间的思考、正文和工具内容
-- 修复历史会话早期产物丢失，并改善云端变更文件和 HTML 产物页内标签切换的预览体验
-- 提升桌面端与移动端同步完整性，会话标题、置顶状态和顺序可正确同步，断线后可自动恢复连接
-- 修复复杂回复正文被工具状态截断，导致内容缺失或顺序异常的问题
+- 新增「订阅和用量」设置页，可查看套餐概览、分类积分和资源包明细，并在应用内购买积分、管理自动续费
+- 优化积分展示与刷新，购买后无需刷新整页即可查看最新余额，体验版套餐的基础积分显示更准确
+- 修复快速、均衡、极致三档模型无法发送图片的问题
+- 修复 Windows 下部分会话首次发送消息后无响应或失败的问题
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
 
 <!-- workbuddy-history:start -->
-仅展示最近 10 个版本；完整逐平台历史记录见 `data/releases.json`。 另有 24 个更早版本未在 README 展开。
+仅展示最近 10 个版本；完整逐平台历史记录见 `data/releases.json`。 另有 25 个更早版本未在 README 展开。
 
 | 版本 | 平台下载 | 更新日志 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- |
+| `5.4.7.37521366` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.4.7.37521366-b148bd1d.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.4.7.37521366-b148bd1d.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.4.7.37521366-b148bd1d.exe) | 新增「订阅和用量」设置页，可查看套餐概览、分类积分和资源包明细，并在应用内购买积分、管理自动续费 | `1788244566` | `2026-09-01T07:40:22Z` |
 | `5.4.5.37398844` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.4.5.37398844-33ba13eb.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.4.5.37398844-33ba13eb.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.4.5.37398844-33ba13eb.exe) | 个人面板新增「记忆与进化」快捷入口，可直接进入个性化记忆设置 | `1788122044` | `2026-08-31T17:00:33Z` |
 | `5.3.14.36279234` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.3.14.36279234-825709d4.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.3.14.36279234-825709d4.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.14.36279234-825709d4.exe) | 新增 Markdown AI 编辑快捷键提示，支持 Enter 直接发送、Cmd+Enter 换行 | `1787002434` | `2026-08-18T06:56:20Z` |
 | `5.3.13.35923969` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.3.13.35923969-20fd9da5.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.3.13.35923969-20fd9da5.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.13.35923969-20fd9da5.exe) | 新增灵感「一键做同款」，支持快速套版复刻网页 | `1786647169` | `2026-08-14T11:51:33Z` |
@@ -41,7 +40,6 @@
 | `5.3.5.34189228` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.3.5.34189228-8044e898.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.3.5.34189228-8044e898.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.5.34189228-8044e898.exe) | Buddy AI 国内升配（订阅计费） | `1784912428` | `2026-07-25T07:24:18Z` |
 | `5.3.3.33961208` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.3.3.33961208-5801cce5.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.3.3.33961208-5801cce5.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.3.33961208-5801cce5.exe) | 新增项目计划板块重构升级，支持待办富文本编辑、评论图片粘贴上传与动态留言 | `1784684408` | `2026-07-23T07:39:57Z` |
 | `5.2.6.33159827` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.2.6.33159827-8ee6bc11.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.2.6.33159827-8ee6bc11.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.2.6.33159827-8ee6bc11.exe) | 新增助理配额上限六档套餐文案与端内升级弹窗，权益变更更透明 | `1783883027` | `2026-07-14T09:11:05Z` |
-| `5.2.5.32793105` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.2.5.32793105-1067a2de.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.2.5.32793105-1067a2de.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.2.5.32793105-1067a2de.exe) | 稳定性增加 | `1783516305` | `2026-07-08T14:33:31Z` |
 <!-- workbuddy-history:end -->
 
 默认接口模板：
