@@ -5,33 +5,34 @@
 ## 最新版本
 
 <!-- workbuddy-latest:start -->
-**当前最新版本：`5.5.1.37570276`**
+**当前最新版本：`5.5.2.37672479`**
 
 最新平台：macOS Apple Silicon, macOS Intel, Windows x64
 
 | 平台 | 最新版本 | 下载 | SHA256 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| macOS Apple Silicon | `5.5.1.37570276` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.5.1.37570276-9af62480.zip) | `d070b13f96db` | `2026-09-02T09:27:12Z` |
-| macOS Intel | `5.5.1.37570276` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.5.1.37570276-9af62480.zip) | `611b576446bb` | `2026-09-02T09:27:12Z` |
-| Windows x64 | `5.5.1.37570276` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.5.1.37570276-9af62480.exe) | - | `2026-09-02T09:27:12Z` |
+| macOS Apple Silicon | `5.5.2.37672479` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.5.2.37672479-2b0177c3.zip) | `edb0a351b541` | `2026-09-03T09:37:05Z` |
+| macOS Intel | `5.5.2.37672479` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.5.2.37672479-2b0177c3.zip) | `2bb1430e1b7d` | `2026-09-03T09:37:05Z` |
+| Windows x64 | `5.5.2.37672479` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.5.2.37672479-2b0177c3.exe) | - | `2026-09-03T09:37:05Z` |
 
-更新日志：[5.5.1](https://www.codebuddy.cn/docs/workbuddy/Changelog)
+更新日志：[5.5.2](https://www.codebuddy.cn/docs/workbuddy/Changelog)
 
-- 视频生成支持选择画面比例、是否带声音，并可描述不希望出现的内容
-- 桌面端侧栏新增当前客户端版本号，便于快速确认所用版本
-- 提升个人及项目云助理的建连和历史任务切换速度，减少首屏与预览区域的白屏等待
-- 优化「订阅和用量」页面，购买积分到账变化更直观，支付二维码展示更稳定，到期提醒更加明确
-- 优化敏感内容确认，同一次任务访问多个敏感内容时不再重复弹窗，并减少图片内容被误判
-- 优化自动化任务和运行记录的搜索与刷新，减少筛选卡顿和空白页，并恢复筛选工具栏
+- 优化积分到期提醒和积分明细，按有效期分类展示，并保留尚未过期的积分包记录
+- 优化会话中的链接与文件引用，悬停时可查看完整地址或路径，展开内容时页面位置更稳定
+- 恢复 Ctrl+Enter 或 Cmd+Enter 换行习惯，同时保留自定义快捷键优先级
+- 修复会话报错后消息消失、重试重复发送，以及切换模型后错误信息不匹配的问题
+- 提升本地历史恢复能力，工作区路径发生变化或存在单条异常记录时仍可正常打开会话
+- 修复 Windows 触屏设备计划看板无法滚动或点按，以及将磁盘根目录设为默认工作区后无法新建会话的问题
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
 
 <!-- workbuddy-history:start -->
-仅展示最近 10 个版本；完整逐平台历史记录见 `data/releases.json`。 另有 26 个更早版本未在 README 展开。
+仅展示最近 10 个版本；完整逐平台历史记录见 `data/releases.json`。 另有 27 个更早版本未在 README 展开。
 
 | 版本 | 平台下载 | 更新日志 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- |
+| `5.5.2.37672479` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.5.2.37672479-2b0177c3.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.5.2.37672479-2b0177c3.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.5.2.37672479-2b0177c3.exe) | 优化积分到期提醒和积分明细，按有效期分类展示，并保留尚未过期的积分包记录 | `1788395679` | `2026-09-03T09:37:05Z` |
 | `5.5.1.37570276` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.5.1.37570276-9af62480.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.5.1.37570276-9af62480.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.5.1.37570276-9af62480.exe) | 视频生成支持选择画面比例、是否带声音，并可描述不希望出现的内容 | `1788293476` | `2026-09-02T09:27:12Z` |
 | `5.4.7.37521366` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.4.7.37521366-b148bd1d.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.4.7.37521366-b148bd1d.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.4.7.37521366-b148bd1d.exe) | 新增「订阅和用量」设置页，可查看套餐概览、分类积分和资源包明细，并在应用内购买积分、管理自动续费 | `1788244566` | `2026-09-01T07:40:22Z` |
 | `5.4.5.37398844` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.4.5.37398844-33ba13eb.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.4.5.37398844-33ba13eb.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.4.5.37398844-33ba13eb.exe) | 个人面板新增「记忆与进化」快捷入口，可直接进入个性化记忆设置 | `1788122044` | `2026-08-31T17:00:33Z` |
@@ -41,7 +42,6 @@
 | `5.3.11.35348084` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.3.11.35348084-45487630.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.3.11.35348084-45487630.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.11.35348084-45487630.exe) | 新增对话出错时「检查网络」快捷入口，网络异常可一键跳转诊断 | `1786071284` | `2026-08-10T04:46:24Z` |
 | `5.3.8.34705286` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.3.8.34705286-e9991e2b.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.3.8.34705286-e9991e2b.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.8.34705286-e9991e2b.exe) | 优化 macOS 文件系统，修复长期间使用下的性能问题 | `1785428486` | `2026-08-01T09:11:30Z` |
 | `5.3.5.34189228` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.3.5.34189228-8044e898.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.3.5.34189228-8044e898.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.5.34189228-8044e898.exe) | Buddy AI 国内升配（订阅计费） | `1784912428` | `2026-07-25T07:24:18Z` |
-| `5.3.3.33961208` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.3.3.33961208-5801cce5.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.3.3.33961208-5801cce5.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.3.33961208-5801cce5.exe) | 新增项目计划板块重构升级，支持待办富文本编辑、评论图片粘贴上传与动态留言 | `1784684408` | `2026-07-23T07:39:57Z` |
 <!-- workbuddy-history:end -->
 
 默认接口模板：
