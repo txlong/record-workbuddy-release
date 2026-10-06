@@ -5,33 +5,25 @@
 ## 最新版本
 
 <!-- workbuddy-latest:start -->
-**当前最新版本：`5.6.2.39298511`**
+**当前最新版本：`5.7.6.40409493`**
 
 最新平台：macOS Apple Silicon, macOS Intel, Windows x64
 
 | 平台 | 最新版本 | 下载 | SHA256 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| macOS Apple Silicon | `5.6.2.39298511` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.6.2.39298511-37a65c0b.zip) | `251d3e56a940` | `2026-09-23T11:22:40Z` |
-| macOS Intel | `5.6.2.39298511` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.6.2.39298511-37a65c0b.zip) | `0bee8b10407e` | `2026-09-23T11:22:40Z` |
-| Windows x64 | `5.6.2.39298511` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.6.2.39298511-37a65c0b.exe) | - | `2026-09-23T11:22:40Z` |
-
-更新日志：[5.6.2](https://www.codebuddy.cn/docs/workbuddy/Changelog)
-
-- 优化文档预览窗口的打开、保存、主题与关闭，未登录也可预览 PPT
-- 优化连接器授权与开关：授权完成后才显示图标，关闭后对话中不再残留可用工具
-- 优化技能安装、更新检测与闲置提醒，不同来源的同名技能不再误标已安装，套件内技能不再被误关
-- 减少对话中反复确认专家身份的追问
-- 修复项目新建本地任务长时间停在准备中，以及删除会话后本地助理打不开的问题
-- 修复超长本地会话「查看更多」无法翻到更早记录的问题
+| macOS Apple Silicon | `5.7.6.40409493` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.7.6.40409493-306add2a.zip) | `97fa56afe78f` | `2026-10-06T10:04:53Z` |
+| macOS Intel | `5.7.6.40409493` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.7.6.40409493-306add2a.zip) | `412b9e9221fe` | `2026-10-06T10:04:53Z` |
+| Windows x64 | `5.7.6.40409493` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.7.6.40409493-306add2a.exe) | - | `2026-10-06T10:04:53Z` |
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
 
 <!-- workbuddy-history:start -->
-仅展示最近 10 个版本；完整逐平台历史记录见 `data/releases.json`。 另有 31 个更早版本未在 README 展开。
+仅展示最近 10 个版本；完整逐平台历史记录见 `data/releases.json`。 另有 32 个更早版本未在 README 展开。
 
 | 版本 | 平台下载 | 更新日志 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- |
+| `5.7.6.40409493` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.7.6.40409493-306add2a.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.7.6.40409493-306add2a.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.7.6.40409493-306add2a.exe) | - | `1791132693` | `2026-10-06T10:04:53Z` |
 | `5.6.2.39298511` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.6.2.39298511-37a65c0b.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.6.2.39298511-37a65c0b.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.6.2.39298511-37a65c0b.exe) | 优化文档预览窗口的打开、保存、主题与关闭，未登录也可预览 PPT | `1790021711` | `2026-09-23T11:22:40Z` |
 | `5.5.6.38337834` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.5.6.38337834-5f969292.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.5.6.38337834-5f969292.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.5.6.38337834-5f969292.exe) | 优化自动化任务重试，失败后可在当前会话中继续，避免创建重复的任务会话 | `1789061034` | `2026-09-11T04:24:03Z` |
 | `5.5.4.38151288` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.5.4.38151288-1ca4889a.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.5.4.38151288-1ca4889a.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.5.4.38151288-1ca4889a.exe) | 「允许锁屏运行」新增关闭、熄屏后继续运行、保持屏幕常亮三种模式 | `1788874488` | `2026-09-09T09:34:26Z` |
@@ -41,7 +33,6 @@
 | `5.4.7.37521366` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.4.7.37521366-b148bd1d.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.4.7.37521366-b148bd1d.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.4.7.37521366-b148bd1d.exe) | 新增「订阅和用量」设置页，可查看套餐概览、分类积分和资源包明细，并在应用内购买积分、管理自动续费 | `1788244566` | `2026-09-01T07:40:22Z` |
 | `5.4.5.37398844` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.4.5.37398844-33ba13eb.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.4.5.37398844-33ba13eb.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.4.5.37398844-33ba13eb.exe) | 个人面板新增「记忆与进化」快捷入口，可直接进入个性化记忆设置 | `1788122044` | `2026-08-31T17:00:33Z` |
 | `5.3.14.36279234` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.3.14.36279234-825709d4.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.3.14.36279234-825709d4.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.14.36279234-825709d4.exe) | 新增 Markdown AI 编辑快捷键提示，支持 Enter 直接发送、Cmd+Enter 换行 | `1787002434` | `2026-08-18T06:56:20Z` |
-| `5.3.13.35923969` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.3.13.35923969-20fd9da5.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.3.13.35923969-20fd9da5.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.13.35923969-20fd9da5.exe) | 新增灵感「一键做同款」，支持快速套版复刻网页 | `1786647169` | `2026-08-14T11:51:33Z` |
 <!-- workbuddy-history:end -->
 
 默认接口模板：
