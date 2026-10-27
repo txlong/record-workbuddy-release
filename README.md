@@ -5,32 +5,34 @@
 ## 最新版本
 
 <!-- workbuddy-latest:start -->
-**当前最新版本：`5.8.3.41334564`**
+**当前最新版本：`5.9.3.42398134`**
 
 最新平台：macOS Apple Silicon, macOS Intel, Windows x64
 
 | 平台 | 最新版本 | 下载 | SHA256 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| macOS Apple Silicon | `5.8.3.41334564` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.8.3.41334564-db0e9b51.zip) | `5a88f67b0bfe` | `2026-10-16T16:30:54Z` |
-| macOS Intel | `5.8.3.41334564` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.8.3.41334564-db0e9b51.zip) | `89a927caef1d` | `2026-10-16T16:30:54Z` |
-| Windows x64 | `5.8.3.41334564` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.8.3.41334564-db0e9b51.exe) | `824de10f3196` | `2026-10-16T16:30:54Z` |
+| macOS Apple Silicon | `5.9.3.42398134` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.9.3.42398134-d4692421.zip) | `55d73c63e44b` | `2026-10-27T19:59:39Z` |
+| macOS Intel | `5.9.3.42398134` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.9.3.42398134-d4692421.zip) | `e093e214cb77` | `2026-10-27T19:59:39Z` |
+| Windows x64 | `5.9.3.42398134` **最新** | [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.9.3.42398134-d4692421.exe) | `b5edb52bd6c5` | `2026-10-27T19:59:39Z` |
 
-更新日志：[5.8.3](https://www.codebuddy.cn/docs/workbuddy/Changelog)
+更新日志：[5.9.3](https://www.codebuddy.cn/docs/workbuddy/Changelog)
 
-- 修复内置运行时随版本切换时同步弹出闪屏的问题
-- 修复账号刷新串号导致会话错乱，以及企微助理会话结束后入口默认回到本地助理的问题
-- 修复 5.8.3 中语音功能因被异常覆盖导致不可用的问题
-- 优化本地沙箱内存占用，修复长期运行后内存膨胀导致的卡死
-- 优化企业代理与系统证书环境下的连接稳定性，修复切换代理后连接异常
+- 修复从其他设备迁移数据时仅能全量导入、无法按分类选择且超大数据无法迁移的问题，导入上限调整为 100GB
+- 修复 Windows 升级时因安装目录校验导致升级检查失败的问题
+- 修复重启后历史会话使用的模型被误回退到其他模型的问题
+- 修复打开已有长会话任务时会话区偶现崩溃、提示「出错了」的问题
+- 修复 Windows 升级后 sandbox 初始化失败导致所有工具执行报错的问题
+- 修复 Windows 静默升级后新进程未能继承完整环境变量、导致部分功能异常的问题
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
 
 <!-- workbuddy-history:start -->
-仅展示最近 10 个版本；完整逐平台历史记录见 `data/releases.json`。 另有 35 个更早版本未在 README 展开。
+仅展示最近 10 个版本；完整逐平台历史记录见 `data/releases.json`。 另有 36 个更早版本未在 README 展开。
 
 | 版本 | 平台下载 | 更新日志 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- |
+| `5.9.3.42398134` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.9.3.42398134-d4692421.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.9.3.42398134-d4692421.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.9.3.42398134-d4692421.exe) | 修复从其他设备迁移数据时仅能全量导入、无法按分类选择且超大数据无法迁移的问题，导入上限调整为 100GB | `1793121334` | `2026-10-27T19:59:39Z` |
 | `5.8.3.41334564` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.8.3.41334564-db0e9b51.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.8.3.41334564-db0e9b51.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.8.3.41334564-db0e9b51.exe) | 修复内置运行时随版本切换时同步弹出闪屏的问题 | `1792057764` | `2026-10-16T16:30:54Z` |
 | `5.8.2.41111488` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.8.2.41111488-b8f6c953.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.8.2.41111488-b8f6c953.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.8.2.41111488-b8f6c953.exe) | 修复部分历史会话因消息异常或内容过大而无法打开的问题 | `1791834688` | `2026-10-14T06:03:03Z` |
 | `5.7.7.40774747` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.7.7.40774747-2e8619da.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.7.7.40774747-2e8619da.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.7.7.40774747-2e8619da.exe) | 优化成长计划体验问题 | `1791497947` | `2026-10-09T08:51:12Z` |
@@ -40,7 +42,6 @@
 | `5.5.4.38151288` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.5.4.38151288-1ca4889a.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.5.4.38151288-1ca4889a.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.5.4.38151288-1ca4889a.exe) | 「允许锁屏运行」新增关闭、熄屏后继续运行、保持屏幕常亮三种模式 | `1788874488` | `2026-09-09T09:34:26Z` |
 | `5.5.3.37748631` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.5.3.37748631-104760a2.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.5.3.37748631-104760a2.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.5.3.37748631-104760a2.exe) | 本地 Office 文件预览支持更大文件，Word 和表格最高 100MB，演示文稿最高 500MB | `1788471831` | `2026-09-04T09:29:28Z` |
 | `5.5.2.37672479` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.5.2.37672479-2b0177c3.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.5.2.37672479-2b0177c3.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.5.2.37672479-2b0177c3.exe) | 优化积分到期提醒和积分明细，按有效期分类展示，并保留尚未过期的积分包记录 | `1788395679` | `2026-09-03T09:37:05Z` |
-| `5.5.1.37570276` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.5.1.37570276-9af62480.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.5.1.37570276-9af62480.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.5.1.37570276-9af62480.exe) | 视频生成支持选择画面比例、是否带声音，并可描述不希望出现的内容 | `1788293476` | `2026-09-02T09:27:12Z` |
 <!-- workbuddy-history:end -->
 
 默认接口模板：
