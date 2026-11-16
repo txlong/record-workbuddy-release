@@ -17,12 +17,12 @@
 
 更新日志：[5.11.3](https://www.codebuddy.cn/docs/workbuddy/Changelog)
 
-- 新增会话流快速问答入口，可在对话中快速发起推荐问答或切回 Agent 模式
-- 修复定时任务云端任务混入「这台电脑」本地列表的问题
 - 修复任务运行会话顶栏编辑时，分组下拉缺少新建分组与选择本地文件夹选项的问题
 - 修复置顶任务通过右键菜单移入分组时与拖拽行为不一致，取消置顶后未直接落到目标分组的问题
-- 偶现修复拖拽任务时侧栏出现空白置顶区的问题
+- 修复拖拽任务时侧栏偶现空白置顶区的问题
 - 修复定时任务侧栏入口与聚合页未读红点点击后未及时消失的问题
+- 修复本地历史会话在特定情况下从侧栏任务列表中丢失的问题
+- 修复设置独立窗口在浅色模式下错误显示为深色的问题，以及无外观权限账号被云端外观配置强制切换至深色的问题
 <!-- workbuddy-latest:end -->
 
 ## 历史版本
@@ -32,7 +32,7 @@
 
 | 版本 | 平台下载 | 更新日志 | 接口时间戳 | 首次记录 |
 | --- | --- | --- | --- | --- |
-| `5.11.3.43806934` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.11.3.43806934-ecace0f7.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.11.3.43806934-ecace0f7.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.11.3.43806934-ecace0f7.exe) | 新增会话流快速问答入口，可在对话中快速发起推荐问答或切回 Agent 模式 | `1794530134` | `2026-11-15T09:09:10Z` |
+| `5.11.3.43806934` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.11.3.43806934-ecace0f7.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.11.3.43806934-ecace0f7.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.11.3.43806934-ecace0f7.exe) | 修复任务运行会话顶栏编辑时，分组下拉缺少新建分组与选择本地文件夹选项的问题 | `1794530134` | `2026-11-15T09:09:10Z` |
 | `5.9.3.42398134` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.9.3.42398134-d4692421.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.9.3.42398134-d4692421.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.9.3.42398134-d4692421.exe) | 修复从其他设备迁移数据时仅能全量导入、无法按分类选择且超大数据无法迁移的问题，导入上限调整为 100GB | `1793121334` | `2026-10-27T19:59:39Z` |
 | `5.8.3.41334564` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.8.3.41334564-db0e9b51.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.8.3.41334564-db0e9b51.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.8.3.41334564-db0e9b51.exe) | 修复内置运行时随版本切换时同步弹出闪屏的问题 | `1792057764` | `2026-10-16T16:30:54Z` |
 | `5.8.2.41111488` | macOS Apple Silicon: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-arm64/WorkBuddy-darwin-arm64-5.8.2.41111488-b8f6c953.zip)<br>macOS Intel: [下载](https://download.codebuddy.cn/workbuddy/saas/darwin-x64/WorkBuddy-darwin-x64-5.8.2.41111488-b8f6c953.zip)<br>Windows x64: [下载](https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.8.2.41111488-b8f6c953.exe) | 修复部分历史会话因消息异常或内容过大而无法打开的问题 | `1791834688` | `2026-10-14T06:03:03Z` |
